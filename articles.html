@@ -1,0 +1,12 @@
+---
+layout: default
+title: articles
+---
+<h1>{{"latest articles "| upcase}}</h1>
+{%for n in site.posts %}
+<ul>
+	<li>
+		</h2><a href="{{n.url}}">{{n.title}}</a></h2>
+	</li>
+	{%endfor%}
+</ul>
