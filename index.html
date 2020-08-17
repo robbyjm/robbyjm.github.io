@@ -2,5 +2,15 @@
 layout: default
 title: home
 ---
-<h1>{{"Hello test" | upcase }}</h1>
-
+<div class="sidebar">
+	<img src="assets/images/robby.png" style="margin: 0 auto; height: 150px"></img>
+	<h1 class="name">Robby Manis</h1>
+</div>
+<div class="main-content">
+{% for post in site.posts %}
+<div class="post">
+	<h2><a href="{{post.url}}" style="font-weight: 700">{{post.title}}</a> {{post.date | date: "%B %Y"}}</h2>
+	{{post.excerpt}}
+</div>
+{%endfor%}
+</div>
