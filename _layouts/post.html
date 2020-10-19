@@ -1,11 +1,25 @@
 ---
-layout: default
 ---
-<article class="article">
-	<div class="heading">
-		<h1 style="font-weight: 700"> {{page.title}}</h1>
-	</div>
-<div class="content">
-{{content}}
-</div>
-</article>
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.typekit.net/ood7uvc.css" />
+        <meta charset="utf-8" />
+        <title>{{page.title}}</title>
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+    </head>
+    <body class="container">
+        {% include navigation.html %}
+        <div class="sidebar">
+            <img src="../../../assets/images/robby.png" style="margin: 0 auto; height: 150px;" />
+            <h1 class="name">Robby Manis</h1>
+        </div>
+        <div class="main-content">
+		<div class="post">
+			<h2 class="post-heading">{{page.title}}</h2>
+			{{ content }}
+		</div>
+        </div>
+	<div class="sidebar-right">
+    </body>
+</html>

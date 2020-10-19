@@ -1,12 +1,11 @@
 ---
 layout: default
-title: articles
+title: articles 
 ---
-<h1>{{"latest articles "| upcase}}</h1>
-{%for n in site.posts %}
-<ul>
-	<li>
-		</h2><a href="{{n.url}}">{{n.title}}</a></h2>
-	</li>
-	{%endfor%}
-</ul>
+<div class="sidebar">
+	<img src="assets/images/robby.png" style="margin: 0 auto; height: 150px"></img>
+	<h1 class="name">Robby Manis</h1>
+</div>
+<div class="main-content">
+	<h2><a href="{{n.url}}">{{n.title}}</a></h2>
+</div>
