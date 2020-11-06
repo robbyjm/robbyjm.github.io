@@ -2,15 +2,31 @@
 layout: default
 title: home
 ---
-<div class="sidebar">
-	<img src="assets/images/robby.png" style="margin: 0 auto; height: 150px"></img>
-	<h1 class="name">Robby Manis</h1>
+<div class="sidebar-left">
+	<div class="name-picture">
+		<img src="assets/images/robby.png" style="margin: 0 auto; height: 150px"></img>
+		<h1 class="name">Robby Manis</h1>
+	</div>
+	<div class="bio">
+		<h3>
+			bio
+		</h3>
+		<i>SAP CoE Cloud Technology | </i>
+		<i>Saint Joseph's University '20</i>
+		<i>Computer Science</i>
+	</div>
+	<div class="contact-info">
+		<h3>
+			get in touch
+		</h3>
+		<p>📧 email robbymanis@tutanota.com</p>
+	</div>
 </div>
-<div class="main-content main-content-override">
-{% for post in site.posts %}
-<div class="post">
-	<h2><a href="{{post.url}}" style="font-weight: 700">{{post.title}}</a> {{post.date | date: "%B %Y"}}</h2>
-	{{post.excerpt}}
-</div>
-{%endfor%}
+<div class="home-main-content">
+	{% for post in site.posts %}
+	<div class="post">
+		<h2><a href="{{post.url}}" style="font-weight: 700">{{post.title}}</a> {{post.date | date: "%B %Y"}}</h2>
+		{{post.excerpt}}
+	</div>
+	{%endfor%}
 </div>

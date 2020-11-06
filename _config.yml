@@ -1,2 +1,3 @@
-kramdown: 
-        input: GFM
+kramdown:
+  input: GFM
+paginate: 5

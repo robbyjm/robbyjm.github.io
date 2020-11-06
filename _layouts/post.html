@@ -1,4 +1,5 @@
 ---
+my_number: 5
 ---
 <!doctype html>
 <html>
@@ -10,16 +11,25 @@
     </head>
     <body class="container">
         {% include navigation.html %}
-        <div class="sidebar">
+        <div class="sidebar-left">
             <img src="../../../assets/images/robby.png" style="margin: 0 auto; height: 150px;" />
             <h1 class="name">Robby Manis</h1>
         </div>
-        <div class="main-content">
+        <div class="post-main-content">
 		<div class="post">
 			<h2 class="post-heading">{{page.title}}</h2>
+            <h3 class="post-subheading">{{page.subheading}}</h2>
 			{{ content }}
 		</div>
         </div>
-	<div class="sidebar-right"></div>
+	<div class="sidebar-right">
+        <h1 class="name">Tags</h1>
+        <p style="justify-self:center">
+        {%for tag in page.tags %}
+        <button class="bttn-bordered bttn-md bttn-primary">{{tag}}</button>
+        {%endfor%}
+        </p>
+    </div>
+
     </body>
 </html>
